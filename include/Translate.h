@@ -5,6 +5,10 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define TRANSLATE_BUF_SIZE 10000
+
+
+
 
 
 #endif
