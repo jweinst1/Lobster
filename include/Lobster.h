@@ -16,6 +16,7 @@
 typedef enum
 {
 	Instruction_Stop,
+	Instruction_Nil,
 	Instruction_Int,
 	Instruction_Add,
 	Instruction_Sub,
@@ -30,7 +31,7 @@ static unsigned char TRANSLATE_BUF[TRANSLATE_BUF_SIZE];
 /** Debugs the translated instructions
   *
   */
-void Lobster_debug()
+void Lobster_debug(void)
 {
 	unsigned char* reader;
 	puts("---Lobster--Instructions----");
@@ -52,6 +53,10 @@ void Lobster_debug()
 			    break;
 			case Instruction_ExpEnd:
 			    puts("ExpEnd;");
+			    reader++;
+			    break;
+			case Instruction_Nil:
+			    puts("Nil;");
 			    reader++;
 			    break;
 			case Instruction_Int:
@@ -130,6 +135,33 @@ void Lobster_translate(char* code)
 	}
 	*writer = Instruction_Stop;
 	return;
+}
+
+long Lobster_Evaluate(unsigned char** ins)
+{
+	long result = 0;
+	Instruction curIns = Instruction_Nil;
+	while(**ins != Instruction_Stop)
+	{
+		switch(**ins)
+		{
+			case Instruction_Nil:
+			    break;
+			case Instruction_Int:
+			    break;
+			case Instruction_Add:
+			    break;
+			case Instruction_Sub:
+			    break;
+			case Instruction_ExpStart:
+			    break;
+			case Instruction_ExpEnd:
+			    break;
+			default:
+			    fprintf(stderr, "Byte Error: Unrecognized instruction: %u\n", **ins);
+			    exit(1);			    		
+		}
+	}
 }
 
 
