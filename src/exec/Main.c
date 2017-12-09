@@ -1,11 +1,14 @@
 #include "Lobster.h"
 //Lobster header built into executable
 
-int main(int argc, char const *argv[])
+int main(int argc, char *argv[])
 {
-	char* cod = "+ (9 -(3 4 ))";
-	Lobster_translate(cod);
-	Lobster_debug();
+	if(argc == 2)
+	{
+		printf("%ld\n", Lobster_compile(argv[1]));
+	}
+	else printf("Must have one argument, got %d arguments\n", argc);
+	
 	return 0;
 
 }
