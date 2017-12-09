@@ -1,5 +1,7 @@
 # Lobster
 
+![Image of Lobster](https://www.mainelobsternow.com/images/live_lobster.jpg)
+
 *An expression-based, binary nesting language*
 
 `Lobster` is a prototype of a nested programming language (Lisp-like), that can be evaluated as pure expressions. 
@@ -13,5 +15,23 @@ The advantage of `Lobster` is the speed and small size at which it can be embedd
 $ make all
 ```
 
+Then, you can compile snippets of code like so
+
+```
+$ ./bin/Lobster "+(8 5 -(9 9))"
+13
+```
+
+To Use Lobster in your application or program, just use the `Lobster.h` file.
+
 ## Goals
+
+The goals of the Lobster Language, despite being quite small, is to prove a different method of evaluation for nested structures in programs, and to greatly decrease the complexity associated with runtimes, virtual machines, and such.
+
+Specifically, `Lobster` aims to tackle the following issues:
+
+> 1. Eliminate the use of AST's, Parsers, Tokens and runtimes.
+> 2. Direct translation from source code to bytecode.
+> 3. Evaluation of instructions in linear O(n) time.
+
 
