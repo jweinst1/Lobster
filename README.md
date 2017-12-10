@@ -36,6 +36,14 @@ Specifically, `Lobster` aims to tackle the following issues:
 
 Lobster accomplishes this via *direct translation* instead of traditional tokenization, parsing, code generation etc.
 
+Example:
+
+```
++ ( 5 4 )
+|  || ||
+[Add, Start, int, {binary}, int, {binary}, End]
+```
+
 
 ## License
 
