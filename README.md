@@ -34,4 +34,10 @@ Specifically, `Lobster` aims to tackle the following issues:
 > 2. Direct translation from source code to bytecode.
 > 3. Evaluation of instructions in linear O(n) time.
 
+Lobster accomplishes this via *direct translation* instead of traditional tokenization, parsing, code generation etc.
+
+
+## License
+
+`Lobster` is MIT licensed and open source.
 
